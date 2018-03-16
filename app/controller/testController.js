@@ -81,8 +81,6 @@ class CarController {
      * returns database insertion status
      */
     create(req, res) {
-        console.log(req.body);
-
         let test = new Test();
         if (req.body.id) {
             test.id = req.body.id;
