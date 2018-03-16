@@ -1,12 +1,11 @@
 # NodeJS REST API SQLite
 
-This project is a proof of concept (POC).  
-It's purpose is to demonstrate an implementation of a NodeJS REST API using SQLite as a database (sqlite.db).   
+This project's purpose is to provide a NodeJS REST API using SQLite as a database (sqlite.db) to store and retrieve speedtest-cli results.  
 The code is written in ES6 and uses Promises.
 
 ## Installation :
 
-1. Clone this repository : `git clone https://github.com/romwaldtff/NodeJS-REST-API-SQLite.git`  
+1. Clone this repository : `git clone git@github.com:linosteenkamp/speedtest-api.git`  
 2. Then install its dependencies : `npm install`
 
 ## Requirements :
@@ -21,7 +20,6 @@ The code is written in ES6 and uses Promises.
 1. Install this application (See Installation).
 2. Start the server with : `node index.js`
 3. Connect Postman to the API at : `http://localhost:3000`
-4. Try the different routes of the API (For more details, see the [documentation](https://github.com/romwaldtff/NodeJS-REST-API-SQLite/wiki)).
 
 Alternatively, you can use `node index.js YOUR_PORT_NUMBER` to start the server with a specific port.  
 
@@ -35,7 +33,7 @@ Alternatively, you can use `node index.js YOUR_PORT_NUMBER` to start the server 
 
 ## Credits
 
-- Made by [Romuald Tuffreau](https://github.com/romwaldtff).
+- REST service template originally made by [Romuald Tuffreau](https://github.com/romwaldtff).
 - [Laurent Guerin](https://github.com/l-gu), creator of [Telosys Tools](https://sites.google.com/site/telosystools/).
 
 ## License

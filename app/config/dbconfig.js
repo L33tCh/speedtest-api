@@ -6,24 +6,24 @@ let sqlite3 = require('sqlite3').verbose();
  */
 
 /* Load database file (Creates file if not exists) */
-let db = new sqlite3.Database('./sqlite.db');
+let db = new sqlite3.Database('./speedtest.db');
 
-/* Init car and driver tables if they don't exist */
+/* Init tests tables if it does not exist */
 let init = function () {
-    db.run("CREATE TABLE if not exists car (" +
+    db.run("CREATE TABLE if not exists tests (" +
         "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-        " maker TEXT," +
-        " model TEXT," +
-        " year INT," +
-        " driver INT" +
+        " server_id integer," +
+        " sponsor text," +
+        " server_name text," +
+        " timestamp text," +
+        " distance real," +
+        " ping real," +
+        " download real," +
+        " upload real," +
+        " share text," +
+        " ip_address text" +
         ")");
 
-    db.run("CREATE TABLE if not exists driver (" +
-        "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-        " firstName TEXT," +
-        " lastName TEXT," +
-        " car INT" +
-        ")");
 };
 
 module.exports = {

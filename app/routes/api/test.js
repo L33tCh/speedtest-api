@@ -3,38 +3,38 @@ const express = require('express');
 const router = express.Router();
 
 /* Load controller */
-const DriverController = require('../../controller/driverController');
-const driverController = new DriverController();
+const TestController = require('../../controller/testController');
+const testController = new TestController();
 
 /**
- * Driver Entity routes
+ * Car Entity routes
  */
 router.get('/count', function (req, res) {
-    driverController.countAll(res);
+    testController.countAll(res);
 });
 
 router.get('/exists/:id', function (req, res) {
-    driverController.exists(req, res);
+    testController.exists(req, res);
 });
 
 router.get('/:id', function (req, res) {
-    driverController.findById(req, res)
+    testController.findById(req, res);
 });
 
 router.get('/', function (req, res) {
-    driverController.findAll(res);
+    testController.findAll(res);
 });
 
 router.put('/:id', function (req, res) {
-    driverController.update(req, res)
+    testController.update(req, res);
 });
 
 router.post('/create', function (req, res) {
-    driverController.create(req, res);
+    testController.create(req, res);
 });
 
 router.delete('/:id', function (req, res) {
-    driverController.deleteById(req, res)
+    testController.deleteById(req, res);
 });
 
 module.exports = router;
