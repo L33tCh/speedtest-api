@@ -1,4 +1,4 @@
-# NodeJS REST API SQLite
+# REST API to manage speedtest-cli data
 
 This project's purpose is to provide a NodeJS REST API using SQLite as a database (sqlite.db) to store and retrieve speedtest-cli results.  
 The code is written in ES6 and uses Promises.

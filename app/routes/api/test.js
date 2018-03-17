@@ -7,6 +7,16 @@ const TestController = require('../../controller/testController');
 const testController = new TestController();
 
 /**
+ *  CORS
+ */
+
+router.all('/', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+ });
+
+/**
  * Car Entity routes
  */
 router.get('/count', function (req, res) {
