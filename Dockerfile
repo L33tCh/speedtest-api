@@ -1,5 +1,6 @@
 FROM node:alpine
 
+# Create volume to persist sqlite database
 VOLUME /usr/src/app/local-db
 
 # Create app directory
@@ -10,7 +11,7 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY package*.json ./
 
-RUN npm install
+RUN npm install --only=production
 # If you are building your code for production
 # RUN npm install --only=production
 
@@ -18,5 +19,7 @@ RUN npm install
 COPY . .
 
 EXPOSE 3000
+
+ENV NODE_ENV production
 
 CMD [ "node", "index.js" ]
