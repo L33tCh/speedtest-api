@@ -6,7 +6,7 @@ let sqlite3 = require('sqlite3').verbose();
  */
 
 /* Load database file (Creates file if not exists) */
-let db = new sqlite3.Database('./speedtest.db');
+let db = new sqlite3.Database('/usr/src/app/local-db/speedtest.db');
 
 /* Init tests tables if it does not exist */
 let init = function () {
