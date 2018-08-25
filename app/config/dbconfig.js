@@ -21,7 +21,8 @@ let init = function () {
         " download real," +
         " upload real," +
         " share text," +
-        " ip_address text" +
+        " ip_address text," +
+        " api_timestamp text" +
         ")");
 
 };

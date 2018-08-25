@@ -3,7 +3,18 @@
  */
 
 class Test {
-    constructor(id, server_id, sponsor, server_name, timestamp, distance, ping, download, upload,  share, ip_address) {
+    constructor(id,
+                server_id,
+                sponsor,
+                server_name,
+                timestamp,
+                distance,
+                ping,
+                download,
+                upload,
+                share,
+                ip_address,
+                api_timestamp) {
         this.id = id;
         this.serverId = server_id;
         this.sponsor = sponsor;
@@ -15,6 +26,7 @@ class Test {
         this.upload = upload;
         this.share = share;
         this.ipAddress = ip_address;
+        this.api_timestamp = api_timestamp;
     }
 }
 

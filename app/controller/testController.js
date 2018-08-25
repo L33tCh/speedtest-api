@@ -69,6 +69,7 @@ class CarController {
         test.upload = req.body.upload;
         test.share = req.body.share;
         test.ip_address = req.body.ip_address;
+        test.api_timestamp = req.body.api_timestamp;
 
         return this.testDao.update(test)
             .then(this.common.editSuccess(res))
@@ -95,6 +96,7 @@ class CarController {
         test.upload = req.body.upload;
         test.share = req.body.share;
         test.ip_address = req.body.ip_address;
+        test.api_timestamp = req.body.api_timestamp;
 
         if (req.body.id) {
             return this.testDao.createWithId(test)
